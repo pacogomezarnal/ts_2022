@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = {
@@ -23,6 +24,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "main.css"
         }),
+        new CopyPlugin({
+            patterns: [
+              { from: "./src/img", to: "img" },
+            ],
+          }),
     ],
     devtool: "inline-source-map",
     mode: "development",
