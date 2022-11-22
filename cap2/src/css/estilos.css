@@ -1,3 +1,71 @@
 body{
     font-family: 'Roboto Flex', sans-serif;
 }
+nav{
+   padding: 5px 0 5px 50px;
+   background-color: #F5DE83;
+   border-bottom: 1px solid black;
+   position: relative;
+   height: 55px;
+}
+section{
+    padding: 20px 0 5px 50px;
+}
+h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+p{
+    text-align: center;
+}
+button{
+    margin-top: 10px;
+    background-color: #AFBF73;
+    border: 1px solid #538C51;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    width: 400px;
+    font-family: 'Alexandria', sans-serif;
+}
+
+#titulo{
+    font-family: 'Alexandria', sans-serif;
+    color: #6C786B;
+    font-size: 36px;
+    font-weight: 400;
+    margin-left: 10px;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#container{
+    display: flex;
+    column-gap: 20px;
+}
+#sushi{
+    display: grid;
+    width: 400px;
+    background-color: #F2B84B;
+    border: 1px solid #D95E32;
+    border-radius: 5px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+}
+#carrito{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 100px;
+    background-color: #F2B84B;
+    border: 1px solid #D95E32;
+    border-radius: 5px;
+}
+.sushi_item{
+    justify-self: center;
+    align-self: center;
+}
