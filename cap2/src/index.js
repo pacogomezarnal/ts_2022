@@ -1,4 +1,6 @@
 const util = require("./util.js");
+require("./css/reset.css");
+require("./css/estilos.css");
 
 const pedido=[];
 const carrito=document.getElementById('carrito');
