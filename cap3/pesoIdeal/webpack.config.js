@@ -4,7 +4,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = {
-    entry: ['./src/index.js'],
+    entry: ['./src/index.ts'],
     output:{
         filename: './js/index.js',
         path: path.resolve(__dirname,'dist'),
@@ -19,6 +19,14 @@ module.exports = {
             ],
           }),
     ],
+    module: {
+        rules: [
+          // all files with a `.ts` extension will be handled by `ts-loader`
+          { test: /\.ts$/, 
+          exclude:/node_modules/,
+          use: "ts-loader" }
+        ]
+    },    
     devtool: "inline-source-map",
     mode: "development",
     devServer:{
