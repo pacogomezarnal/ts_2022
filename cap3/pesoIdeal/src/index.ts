@@ -1,9 +1,3 @@
-//Definicion de las variables
-let sexo:string;
-let edad:number;
-let peso:number;
-let altura:number;
-let actividad:string;
 //Definicion de variables del DOM
 const sexoSelect:HTMLSelectElement=document.getElementById("sexo") as HTMLSelectElement;
 const edadInput:HTMLInputElement=<HTMLInputElement>document.getElementById("edad");
@@ -20,7 +14,7 @@ function calcularTMB(sexo:string,peso:number,altura:number,edad:number):number{
         return ((10*peso)+(6.25*altura)-(5*edad)+5);
     }
 }
-function calcularKcal(actividad:string,tmb:number):number{
+function calcularKcal(actividad:string,tmb:number,kcal:boolean=true):number{
     if(actividad=="baja") return (tmb*1.375)/1000;
     else if(actividad=="moderada") return (tmb*1.55)/1000;
     else return (tmb*1.725)/1000;
@@ -33,6 +27,17 @@ function transformarInputNumber(elemento:HTMLInputElement):number{
     return valor;
 }
 function calcularDatos(event:any){
+    //Definicion de las variables
+    let sexo:string|undefined;
+    let edad:number;
+    let peso:number;
+    let altura:number;
+    let actividad:string;
+
+    //Log
+    sexo=undefined;
+    console.log(sexo);
+
     //Eliminamos la recarga por defecto del button
     event.preventDefault();
 
