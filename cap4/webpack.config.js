@@ -27,6 +27,9 @@ module.exports = {
           use: "ts-loader" }
         ]
     },    
+    resolve:{
+      extensions:['.tsx','.ts','js']
+    },
     devtool: "inline-source-map",
     mode: "development",
     devServer:{

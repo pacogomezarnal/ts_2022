@@ -1,3 +1,5 @@
+import {Plato} from './plato';
+
 /*
 * Clase Bebida de un menu
 *

@@ -1,73 +1,80 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/platomenu.ts":
+/*!**************************!*\
+  !*** ./src/platomenu.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.PlatoMenu = void 0;
+/*
+* Clase plato de un menu
+*
+*/
+class PlatoMenu {
+    calcularKcal() {
+        return 100;
+    }
+}
+exports.PlatoMenu = PlatoMenu;
+PlatoMenu.TIPO_ENTRANTE = 0;
+PlatoMenu.TIPO_PRIMERO = 1;
+PlatoMenu.TIPO_SEGUNDO = 2;
+PlatoMenu.TIPO_POSTRE = 2;
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
 var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+var exports = __webpack_exports__;
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
 
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const platomenu_1 = __webpack_require__(/*! ./platomenu */ "./src/platomenu.ts");
 //Definicion de variables del DOM
-const sexoSelect = document.getElementById("sexo");
-const edadInput = document.getElementById("edad");
-const pesoInput = document.getElementById("peso");
-const alturaInput = document.getElementById("altura");
-const actividadSelect = document.getElementById("actividad");
-const calMin = document.getElementById("calMin");
-const botonCalculo = document.getElementById("calculobtn");
-function calcularTMB(sexo, peso, altura, edad) {
-    if (sexo == "Mujer") {
-        return ((10 * peso) + (6.25 * altura) - (5 * edad) - 161);
-    }
-    else {
-        return ((10 * peso) + (6.25 * altura) - (5 * edad) + 5);
-    }
-}
-function calcularKcal(actividad, tmb, kcal = true) {
-    if (actividad == "baja")
-        return (tmb * 1.375) / 1000;
-    else if (actividad == "moderada")
-        return (tmb * 1.55) / 1000;
-    else
-        return (tmb * 1.725) / 1000;
-}
-function transformarInputNumber(elemento) {
-    let valor;
-    valor = parseInt(elemento.value);
-    if (isNaN(valor))
-        valor = 0;
-    return valor;
-}
-function calcularDatos(event) {
-    //Definicion de las variables
-    let sexo;
-    let edad;
-    let peso;
-    let altura;
-    let actividad;
-    //Log
-    sexo = undefined;
-    console.log(sexo);
-    //Eliminamos la recarga por defecto del button
-    event.preventDefault();
-    sexo = sexoSelect.options[sexoSelect.selectedIndex].text;
-    actividad = actividadSelect.options[actividadSelect.selectedIndex].text;
-    edad = transformarInputNumber(edadInput);
-    peso = transformarInputNumber(pesoInput);
-    altura = transformarInputNumber(alturaInput);
-    //Log
-    console.log(sexo);
-    console.log(actividad);
-    console.log(edad);
-    console.log(peso);
-    console.log(altura);
-    //Realizamos los cálculos
-    let tmb = calcularTMB(sexo, peso, altura, edad);
-    let kcal = calcularKcal(actividad, tmb);
-    //Colocamos el cálculo
-    calMin.value = kcal.toString();
-}
-//Asignar boton
-botonCalculo.addEventListener("click", calcularDatos);
+//Lista de entrantes
+const entrante01 = new platomenu_1.PlatoMenu();
+entrante01.tipo = platomenu_1.PlatoMenu.TIPO_ENTRANTE;
+entrante01.nombre = "entrante01";
+entrante01.imagen = "./img/entrante01.png";
+
+})();
 
 /******/ })()
 ;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9qcy9pbmRleC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBYTtBQUNiO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly93b25kZXJmb29kLy4vc3JjL2luZGV4LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xyXG4vL0RlZmluaWNpb24gZGUgdmFyaWFibGVzIGRlbCBET01cclxuY29uc3Qgc2V4b1NlbGVjdCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwic2V4b1wiKTtcclxuY29uc3QgZWRhZElucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJlZGFkXCIpO1xyXG5jb25zdCBwZXNvSW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcInBlc29cIik7XHJcbmNvbnN0IGFsdHVyYUlucHV0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJhbHR1cmFcIik7XHJcbmNvbnN0IGFjdGl2aWRhZFNlbGVjdCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKFwiYWN0aXZpZGFkXCIpO1xyXG5jb25zdCBjYWxNaW4gPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChcImNhbE1pblwiKTtcclxuY29uc3QgYm90b25DYWxjdWxvID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoXCJjYWxjdWxvYnRuXCIpO1xyXG5mdW5jdGlvbiBjYWxjdWxhclRNQihzZXhvLCBwZXNvLCBhbHR1cmEsIGVkYWQpIHtcclxuICAgIGlmIChzZXhvID09IFwiTXVqZXJcIikge1xyXG4gICAgICAgIHJldHVybiAoKDEwICogcGVzbykgKyAoNi4yNSAqIGFsdHVyYSkgLSAoNSAqIGVkYWQpIC0gMTYxKTtcclxuICAgIH1cclxuICAgIGVsc2Uge1xyXG4gICAgICAgIHJldHVybiAoKDEwICogcGVzbykgKyAoNi4yNSAqIGFsdHVyYSkgLSAoNSAqIGVkYWQpICsgNSk7XHJcbiAgICB9XHJcbn1cclxuZnVuY3Rpb24gY2FsY3VsYXJLY2FsKGFjdGl2aWRhZCwgdG1iLCBrY2FsID0gdHJ1ZSkge1xyXG4gICAgaWYgKGFjdGl2aWRhZCA9PSBcImJhamFcIilcclxuICAgICAgICByZXR1cm4gKHRtYiAqIDEuMzc1KSAvIDEwMDA7XHJcbiAgICBlbHNlIGlmIChhY3RpdmlkYWQgPT0gXCJtb2RlcmFkYVwiKVxyXG4gICAgICAgIHJldHVybiAodG1iICogMS41NSkgLyAxMDAwO1xyXG4gICAgZWxzZVxyXG4gICAgICAgIHJldHVybiAodG1iICogMS43MjUpIC8gMTAwMDtcclxufVxyXG5mdW5jdGlvbiB0cmFuc2Zvcm1hcklucHV0TnVtYmVyKGVsZW1lbnRvKSB7XHJcbiAgICBsZXQgdmFsb3I7XHJcbiAgICB2YWxvciA9IHBhcnNlSW50KGVsZW1lbnRvLnZhbHVlKTtcclxuICAgIGlmIChpc05hTih2YWxvcikpXHJcbiAgICAgICAgdmFsb3IgPSAwO1xyXG4gICAgcmV0dXJuIHZhbG9yO1xyXG59XHJcbmZ1bmN0aW9uIGNhbGN1bGFyRGF0b3MoZXZlbnQpIHtcclxuICAgIC8vRGVmaW5pY2lvbiBkZSBsYXMgdmFyaWFibGVzXHJcbiAgICBsZXQgc2V4bztcclxuICAgIGxldCBlZGFkO1xyXG4gICAgbGV0IHBlc287XHJcbiAgICBsZXQgYWx0dXJhO1xyXG4gICAgbGV0IGFjdGl2aWRhZDtcclxuICAgIC8vTG9nXHJcbiAgICBzZXhvID0gdW5kZWZpbmVkO1xyXG4gICAgY29uc29sZS5sb2coc2V4byk7XHJcbiAgICAvL0VsaW1pbmFtb3MgbGEgcmVjYXJnYSBwb3IgZGVmZWN0byBkZWwgYnV0dG9uXHJcbiAgICBldmVudC5wcmV2ZW50RGVmYXVsdCgpO1xyXG4gICAgc2V4byA9IHNleG9TZWxlY3Qub3B0aW9uc1tzZXhvU2VsZWN0LnNlbGVjdGVkSW5kZXhdLnRleHQ7XHJcbiAgICBhY3RpdmlkYWQgPSBhY3RpdmlkYWRTZWxlY3Qub3B0aW9uc1thY3RpdmlkYWRTZWxlY3Quc2VsZWN0ZWRJbmRleF0udGV4dDtcclxuICAgIGVkYWQgPSB0cmFuc2Zvcm1hcklucHV0TnVtYmVyKGVkYWRJbnB1dCk7XHJcbiAgICBwZXNvID0gdHJhbnNmb3JtYXJJbnB1dE51bWJlcihwZXNvSW5wdXQpO1xyXG4gICAgYWx0dXJhID0gdHJhbnNmb3JtYXJJbnB1dE51bWJlcihhbHR1cmFJbnB1dCk7XHJcbiAgICAvL0xvZ1xyXG4gICAgY29uc29sZS5sb2coc2V4byk7XHJcbiAgICBjb25zb2xlLmxvZyhhY3RpdmlkYWQpO1xyXG4gICAgY29uc29sZS5sb2coZWRhZCk7XHJcbiAgICBjb25zb2xlLmxvZyhwZXNvKTtcclxuICAgIGNvbnNvbGUubG9nKGFsdHVyYSk7XHJcbiAgICAvL1JlYWxpemFtb3MgbG9zIGPDoWxjdWxvc1xyXG4gICAgbGV0IHRtYiA9IGNhbGN1bGFyVE1CKHNleG8sIHBlc28sIGFsdHVyYSwgZWRhZCk7XHJcbiAgICBsZXQga2NhbCA9IGNhbGN1bGFyS2NhbChhY3RpdmlkYWQsIHRtYik7XHJcbiAgICAvL0NvbG9jYW1vcyBlbCBjw6FsY3Vsb1xyXG4gICAgY2FsTWluLnZhbHVlID0ga2NhbC50b1N0cmluZygpO1xyXG59XHJcbi8vQXNpZ25hciBib3RvblxyXG5ib3RvbkNhbGN1bG8uYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsIGNhbGN1bGFyRGF0b3MpO1xyXG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9qcy9pbmRleC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQWE7QUFDYiw4Q0FBNkMsRUFBRSxhQUFhLEVBQUM7QUFDN0QsaUJBQWlCO0FBQ2pCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlCQUFpQjtBQUNqQjtBQUNBO0FBQ0E7QUFDQTs7Ozs7OztVQ2hCQTtVQUNBOztVQUVBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBO1VBQ0E7VUFDQTtVQUNBOztVQUVBO1VBQ0E7O1VBRUE7VUFDQTtVQUNBOzs7Ozs7Ozs7O0FDdEJhO0FBQ2IsOENBQTZDLEVBQUUsYUFBYSxFQUFDO0FBQzdELG9CQUFvQixtQkFBTyxDQUFDLHVDQUFhO0FBQ3pDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL3dvbmRlcmZvb2QvLi9zcmMvcGxhdG9tZW51LnRzIiwid2VicGFjazovL3dvbmRlcmZvb2Qvd2VicGFjay9ib290c3RyYXAiLCJ3ZWJwYWNrOi8vd29uZGVyZm9vZC8uL3NyYy9pbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcclxuT2JqZWN0LmRlZmluZVByb3BlcnR5KGV4cG9ydHMsIFwiX19lc01vZHVsZVwiLCB7IHZhbHVlOiB0cnVlIH0pO1xyXG5leHBvcnRzLlBsYXRvTWVudSA9IHZvaWQgMDtcclxuLypcclxuKiBDbGFzZSBwbGF0byBkZSB1biBtZW51XHJcbipcclxuKi9cclxuY2xhc3MgUGxhdG9NZW51IHtcclxuICAgIGNhbGN1bGFyS2NhbCgpIHtcclxuICAgICAgICByZXR1cm4gMTAwO1xyXG4gICAgfVxyXG59XHJcbmV4cG9ydHMuUGxhdG9NZW51ID0gUGxhdG9NZW51O1xyXG5QbGF0b01lbnUuVElQT19FTlRSQU5URSA9IDA7XHJcblBsYXRvTWVudS5USVBPX1BSSU1FUk8gPSAxO1xyXG5QbGF0b01lbnUuVElQT19TRUdVTkRPID0gMjtcclxuUGxhdG9NZW51LlRJUE9fUE9TVFJFID0gMjtcclxuIiwiLy8gVGhlIG1vZHVsZSBjYWNoZVxudmFyIF9fd2VicGFja19tb2R1bGVfY2FjaGVfXyA9IHt9O1xuXG4vLyBUaGUgcmVxdWlyZSBmdW5jdGlvblxuZnVuY3Rpb24gX193ZWJwYWNrX3JlcXVpcmVfXyhtb2R1bGVJZCkge1xuXHQvLyBDaGVjayBpZiBtb2R1bGUgaXMgaW4gY2FjaGVcblx0dmFyIGNhY2hlZE1vZHVsZSA9IF9fd2VicGFja19tb2R1bGVfY2FjaGVfX1ttb2R1bGVJZF07XG5cdGlmIChjYWNoZWRNb2R1bGUgIT09IHVuZGVmaW5lZCkge1xuXHRcdHJldHVybiBjYWNoZWRNb2R1bGUuZXhwb3J0cztcblx0fVxuXHQvLyBDcmVhdGUgYSBuZXcgbW9kdWxlIChhbmQgcHV0IGl0IGludG8gdGhlIGNhY2hlKVxuXHR2YXIgbW9kdWxlID0gX193ZWJwYWNrX21vZHVsZV9jYWNoZV9fW21vZHVsZUlkXSA9IHtcblx0XHQvLyBubyBtb2R1bGUuaWQgbmVlZGVkXG5cdFx0Ly8gbm8gbW9kdWxlLmxvYWRlZCBuZWVkZWRcblx0XHRleHBvcnRzOiB7fVxuXHR9O1xuXG5cdC8vIEV4ZWN1dGUgdGhlIG1vZHVsZSBmdW5jdGlvblxuXHRfX3dlYnBhY2tfbW9kdWxlc19fW21vZHVsZUlkXShtb2R1bGUsIG1vZHVsZS5leHBvcnRzLCBfX3dlYnBhY2tfcmVxdWlyZV9fKTtcblxuXHQvLyBSZXR1cm4gdGhlIGV4cG9ydHMgb2YgdGhlIG1vZHVsZVxuXHRyZXR1cm4gbW9kdWxlLmV4cG9ydHM7XG59XG5cbiIsIlwidXNlIHN0cmljdFwiO1xyXG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XHJcbmNvbnN0IHBsYXRvbWVudV8xID0gcmVxdWlyZShcIi4vcGxhdG9tZW51XCIpO1xyXG4vL0RlZmluaWNpb24gZGUgdmFyaWFibGVzIGRlbCBET01cclxuLy9MaXN0YSBkZSBlbnRyYW50ZXNcclxuY29uc3QgZW50cmFudGUwMSA9IG5ldyBwbGF0b21lbnVfMS5QbGF0b01lbnUoKTtcclxuZW50cmFudGUwMS50aXBvID0gcGxhdG9tZW51XzEuUGxhdG9NZW51LlRJUE9fRU5UUkFOVEU7XHJcbmVudHJhbnRlMDEubm9tYnJlID0gXCJlbnRyYW50ZTAxXCI7XHJcbmVudHJhbnRlMDEuaW1hZ2VuID0gXCIuL2ltZy9lbnRyYW50ZTAxLnBuZ1wiO1xyXG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=
