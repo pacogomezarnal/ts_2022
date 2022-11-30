@@ -17,6 +17,13 @@ export class PlatoMenu implements Plato{
     private _alimentos: Alimento[];
     tipo:number;
 
+    constructor(nombre:string, imagen:string, tipo:number) {
+        this.nombre = nombre;
+        this.imagen = imagen;
+        this.tipo = tipo;
+        this._alimentos=[];
+    }
+
     setAlimento(alimento:Alimento):void{
         this._alimentos.push(alimento);
     }

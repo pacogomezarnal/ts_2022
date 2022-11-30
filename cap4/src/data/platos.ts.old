@@ -1,0 +1,81 @@
+export const platos=
+[
+    {
+        "nombre":"pan con tomate",
+        "imagen":"./img/entrante01",
+        "tipo":0,
+        "alimentos":[
+            {
+                "nombre":"tomate",
+                "cal":18,
+                "cant":2
+            },
+            {
+                "nombre":"pan",
+                "cal":270,
+                "cant":1
+            },            
+        ]
+    },
+    {
+        "nombre":"sopa de ajo",
+        "imagen":"./img/primero01",
+        "tipo":1,
+        "alimentos":[
+            {
+                "nombre":"ajo",
+                "kcal":149,
+                "cant":0.1
+            },
+            {
+                "nombre":"pan",
+                "kcal":270,
+                "cant":0.25
+            },            
+        ]
+    },
+    {
+        "nombre":"pizza margarita",
+        "imagen":"./img/segundo01",
+        "tipo":2,
+        "alimentos":[
+            {
+                "nombre":"tomate",
+                "cal":29,
+                "cant":0.25
+            },
+            {
+                "nombre":"masa pizza",
+                "kcal":150,
+                "cant":2.5
+            },
+            {
+                "nombre":"mozzarella",
+                "kcal":280,
+                "cant":1.5
+            },               
+        ]
+    },
+    {
+        "nombre":"tarta chocolate",
+        "imagen":"./img/postre01.png",
+        "tipo":3,
+        "alimentos":[
+            {
+                "nombre":"chocolate",
+                "cal":546,
+                "cant":2
+            },
+            {
+                "nombre":"azucar",
+                "kcal":386,
+                "cant":3
+            },
+            {
+                "nombre":"bizcocho",
+                "kcal":340,
+                "cant":5
+            },               
+        ]
+    }
+];

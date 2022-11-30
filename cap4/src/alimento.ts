@@ -9,9 +9,10 @@ export class Alimento{
     private _cantidad:number;
 
       // Normal signature with defaults
-    constructor(nombre:string, kcal:number) {
+    constructor(nombre:string, kcal:number, cant:number) {
         this._nombre = nombre;
         this._kcal = kcal;
+        this._cantidad = cant;
     }
 
     get nombre() {
