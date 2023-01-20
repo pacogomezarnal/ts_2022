@@ -1,7 +1,14 @@
 body{
     font-family: 'Roboto Flex', sans-serif;
-    background-color: #F2F2F2;
+    background-color: #2D3E40;
     height: 100%;
+}
+footer{
+    background-color: #2D3E40;
+    color: #F2F2F2;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
 h3{
     font-family: 'Roboto Flex', sans-serif;
@@ -88,6 +95,7 @@ button{
     width: 25px;
 }
 
+
 main{
     display: flex;
     height: 100%;
@@ -95,9 +103,10 @@ main{
 #platos{
     width: 50%;
     display: flex;
+    background-color: #F2F2F2;
     flex-direction: column;
 }
-.seccionplatos{
+section{
     padding: 10px;
     font-family: 'Roboto Flex', sans-serif;
     font-size: 16px;
@@ -130,4 +139,10 @@ li{
 li p{
     padding-top: 2px;
     border-top: 1px solid #2D3E40;
+}
+.kcal{
+    padding-top: 5px;
+    border-top: 0px solid #2D3E40;
+    border-bottom: 1px solid #2D3E40;
+    font-weight: 800;
 }

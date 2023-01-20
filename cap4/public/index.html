@@ -62,28 +62,52 @@
     </nav>
     <main>
         <article id="platos">
-            <section class="seccionplatos">
+            <section>
                 <h3>Entrantes</h3>
                 <ul id="entrantes">
                 </ul>
             </section>
-            <section class="seccionplatos">
+            <section>
                 <h3>Primeros</h3>
                 <ul id="primeros">
                 </ul>
             </section>
-            <section class="seccionplatos">
+            <section>
                 <h3>Segundos</h3>
                 <ul id="segundos">
                 </ul>
             </section>
-            <section class="seccionplatos">
+            <section>
                 <h3>Postres</h3>
                 <ul id="postres">
                 </ul>
             </section>
         </article>
-        <article id="menus">Menu</div>
+        <article id="menus">
+            <section>
+                <h3>Menu</h3>
+                <ul id="menu">
+                    <li id="menuEntrante"><img src="./img/noelegido.png" alt="" width="100"><p>entrante sin elegir</p></li>
+                    <li id="menuPrimero"><img src="./img/noelegido.png" alt="" width="100"><p>primero sin elegir</p></li>
+                    <li id="menuSegundo"><img src="./img/noelegido.png" alt="" width="100"><p>segundo sin elegir</p></li>
+                    <li id="menuPostre"><img src="./img/noelegido.png" alt="" width="100"><p>postre sin elegir</p></li>
+                </ul>
+                <div class="item_form">
+                    <label for="altura">altura</label>
+                    <div class="item_form_med">
+                        <input type="text" id="kcalTotal" class="inputConMed" value="0" disabled>
+                        <input type="text" id="kcalTotalMed" class="inputMed" value="kcal" disabled> 
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Lista de la compra</h3>
+                <ul id="listacompra"></ul>
+            </section>
+        </div>
     </main>
+    <footer>
+        <p>Realizado por Paco Gomez para Mastermind</p>
+    </footer>
 </body>
 </html>

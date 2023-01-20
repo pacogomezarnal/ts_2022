@@ -9,7 +9,7 @@ export class PlatoMenu implements Plato{
     public static readonly TIPO_ENTRANTE = 0;
     public static readonly TIPO_PRIMERO = 1;
     public static readonly TIPO_SEGUNDO = 2;
-    public static readonly TIPO_POSTRE = 2;
+    public static readonly TIPO_POSTRE = 3;
     
     nombre: string;
     imagen: string;
@@ -26,6 +26,10 @@ export class PlatoMenu implements Plato{
 
     setAlimento(alimento:Alimento):void{
         this._alimentos.push(alimento);
+    }
+
+    get alimentos():Alimento[]{
+        return this._alimentos;
     }
 
     calcularKcal():number{

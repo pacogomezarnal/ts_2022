@@ -62,72 +62,52 @@
     </nav>
     <main>
         <article id="platos">
-            <section class="seccionplatos">
+            <section>
                 <h3>Entrantes</h3>
                 <ul id="entrantes">
                 </ul>
             </section>
-            <section class="seccionplatos">
+            <section>
                 <h3>Primeros</h3>
-                <ul>
-                    <li>
-                        <img src="./img/primero01.png" alt="" width="50">
-                        <p>Primero 01</p>
-                    </li>
-                    <li>
-                        <img src="./img/sushi01.png" alt="" width="50">
-                        <p>Primero 02</p>
-                    </li>
-                    <li>
-                        <img src="./img/sushi03.png" alt="" width="50">
-                        <p>Primero 03</p>
-                    </li>
-                    <li>
-                        <img src="./img/sushi04.png" alt="" width="50">
-                        <p>Primero 04</p>
-                    </li>
+                <ul id="primeros">
                 </ul>
             </section>
-            <section class="seccionplatos">
+            <section>
                 <h3>Segundos</h3>
-                <ul>
-                    <li>
-                        <img src="./img/segundo01.png" alt="" width="50">
-                        <p>Segundo 01</p>
-                    </li>
-                    <li>
-                        <img src="./img/segundo02.png" alt="" width="50">
-                        <p>Segundo 02</p>
-                    </li>
-                    <li>
-                        <img src="./img/segundo03.png" alt="" width="50">
-                        <p>Segundo 013</p>
-                    </li>
-                    <li>
-                        <img src="./img/segundo04.png" alt="" width="50">
-                        <p>Segundo 04</p>
-                    </li>
-                    <li>
-                        <img src="./img/segundo05.png" alt="" width="50">
-                        <p>Segundo 05</p>
-                    </li>
+                <ul id="segundos">
                 </ul>
             </section>
-            <section class="seccionplatos">
+            <section>
                 <h3>Postres</h3>
-                <ul>
-                    <li>
-                        <img src="./img/postre01.png" alt="" width="50">
-                        <p>Postre 01</p>
-                    </li>
-                    <li>
-                        <img src="./img/postre02.png" alt="" width="50">
-                        <p>Postre 02</p>
-                    </li>
+                <ul id="postres">
                 </ul>
             </section>
         </article>
-        <article id="menus">Menu</div>
+        <article id="menus">
+            <section>
+                <h3>Menu</h3>
+                <ul id="menu">
+                    <li id="menuEntrante"><img src="./img/noelegido.png" alt="" width="100"><p>entrante sin elegir</p></li>
+                    <li id="menuPrimero"><img src="./img/noelegido.png" alt="" width="100"><p>primero sin elegir</p></li>
+                    <li id="menuSegundo"><img src="./img/noelegido.png" alt="" width="100"><p>segundo sin elegir</p></li>
+                    <li id="menuPostre"><img src="./img/noelegido.png" alt="" width="100"><p>postre sin elegir</p></li>
+                </ul>
+                <div class="item_form">
+                    <label for="altura">altura</label>
+                    <div class="item_form_med">
+                        <input type="text" id="kcalTotal" class="inputConMed" value="0" disabled>
+                        <input type="text" id="kcalTotalMed" class="inputMed" value="kcal" disabled> 
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Lista de la compra</h3>
+                <ul id="listacompra"></ul>
+            </section>
+        </div>
     </main>
+    <footer>
+        <p>Realizado por Paco Gomez para Mastermind</p>
+    </footer>
 </body>
 </html>
